@@ -170,8 +170,11 @@ https://templatemo.com/tm-536-dream-pulse
                               <figure class="effect-bubba">
                                 <img src="{% static 'img/gallery/01.jpg' %}" alt="Our Work Image" class="img-fluid">
                                 <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
+
+                                  <h2> {{work1.first_name}} <span>{{work1.last_name}}</span></h2>
+
+                                  <p> {{work1.caption}} </p>
+
                                   <a href="{% static 'img/gallery/large/01.jpg' %}">View more</a>
                                 </figcaption>
                               </figure>
