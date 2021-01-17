@@ -1,0 +1,33 @@
+{% extends 'calc/base.html' %}
+
+{% block one %}
+
+<h1>Hello {{name}} </h1>
+
+{% for num in list %}
+
+{% if num|divisibleby:2 %}
+<h2>{{num}} is Even</h2>
+
+{% else %}
+<h2>{{num}} is Odd</h2>
+
+{% endif %}
+
+{% endfor %}
+
+<form action="add" method="post">
+
+	{% csrf_token %}
+	
+	Enter 1st number: <input type="text" name="num1"><br><br>
+	Enter 2nd number: <input type="text" name="num2"><br><br>
+	<input type="submit">
+
+</form>
+
+{% endblock %}
+
+{% block two %}
+<h1>Block two is going on!!</h1>
+{% endblock %}

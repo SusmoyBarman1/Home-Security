@@ -1,0 +1,21 @@
+1. Create a django project
+-> django-admin startproject project_name
+
+2. Start app -> python manage.py startapp app_name
+
+3. add the app name in 'settings.py'
+
+4. add url in 'urls.py'
+
+5. add function in 'views.py'
+
+6. To add static files, first copy the html files in 'templates' folder and copy the static files like js, css in static folder.
+and then write this on settings.py:
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+then write a command in cmd: python manage.py collectstatic 
+
+This will autometically create a folder callded 'assets' and copy all static files into it. But till this point, the html file can not load the static files. To load the static files in html file, we need to put all 'href' and 'src' into:
+{% static 'href' %}
