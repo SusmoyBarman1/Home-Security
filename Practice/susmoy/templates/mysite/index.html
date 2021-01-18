@@ -174,6 +174,11 @@ https://templatemo.com/tm-536-dream-pulse
                             <div class="tm-gallery-item">                       
                               <figure class="effect-bubba">
                                 <img src=" {{baseUrl}}/{{work.img}}" alt="Our Work Image" class="img-fluid">
+
+                                {% if work.offer %}
+                                <div class="spec_offer text-center"> <a href="#">Special Offer</a> </div>
+                                {% endif %}
+
                                 <figcaption>
 
                                   <h2> {{work.first_name}} <span>{{work.last_name}}</span></h2>

@@ -8,3 +8,4 @@ class Work:
 	last_name: str
 	img: str
 	caption: str
+	offer = bool
