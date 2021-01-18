@@ -270,16 +270,24 @@ https://templatemo.com/tm-536-dream-pulse
                     <div class="tm-double-border-2 tm-border-gray tm-box-pad">
                         <h2 class="tm-color-primary tm-section-title mb-4">Account</h2>
 
+
+                        {% if user.is_authenticated %}
+
+                        <p class="mb-3">
+                          <li><a href="accounts/logout">Hello, {{user.last_name}}Logout</a></li>
+                        </p>
+
+                        {% else %}
                         <p class="mb-4">
                           <li><a href="accounts/register">Create Account</a></li>
                         </p>
-
                         
                         <p class="mb-3">
-                          120-240 Orci varius natoque penatibus, <br>
-                          parturient montes, 10660 <br>
-                          nasvetur ridiculus mus
+                          <li><a href="accounts/login">Login</a></li>
                         </p>
+
+                        {% endif %}
+
                     </div>                    
                   </div>                  
                 </div>

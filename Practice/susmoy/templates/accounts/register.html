@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<head>
 	<title>Registration section</title>
-
-</html>
+</head>
+	
 
 <body>
 	
@@ -21,4 +22,14 @@
 
 	</form>
 
+	<div>
+		
+		{% for message in messages %}
+		<h3> {{message}} </h3>
+		{% endfor %}
+
+	</div>
+
 </body>
+
+</html>
