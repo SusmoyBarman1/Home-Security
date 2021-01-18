@@ -1,4 +1,5 @@
 {% load static %}
+{% static 'img/gallery' as baseUrl %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -166,89 +167,28 @@ https://templatemo.com/tm-536-dream-pulse
                       <div class="tm-gallery-wrap">
                           <h2 class="tm-color-primary tm-section-title mb-4 ml-2">Our Work</h2>
                           <div class="tm-gallery">
-                            <div class="tm-gallery-item">                        
+
+                            
+                            {% for work in works %}
+                            <!------work------>
+                            <div class="tm-gallery-item">                       
                               <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/01.jpg' %}" alt="Our Work Image" class="img-fluid">
+                                <img src=" {{baseUrl}}/{{work.img}}" alt="Our Work Image" class="img-fluid">
                                 <figcaption>
 
-                                  <h2> {{work1.first_name}} <span>{{work1.last_name}}</span></h2>
+                                  <h2> {{work.first_name}} <span>{{work.last_name}}</span></h2>
 
-                                  <p> {{work1.caption}} </p>
+                                  <p> {{work.caption}} </p>
 
                                   <a href="{% static 'img/gallery/large/01.jpg' %}">View more</a>
                                 </figcaption>
                               </figure>
                             </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/02.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/02.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/03.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/03.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/04.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/04.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/05.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/05.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/06.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/06.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/07.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/07.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
-                            <div class="tm-gallery-item">
-                              <figure class="effect-bubba">
-                                <img src="{% static 'img/gallery/08.jpg' %}" alt="Our Work Image" class="img-fluid">
-                                <figcaption>
-                                  <h2>Fresh <span>Bubba</span></h2>
-                                  <p>Bubba likes to appear out of thin air.</p>
-                                  <a href="{% static 'img/gallery/large/08.jpg' %}">View more</a>
-                                </figcaption>
-                              </figure>
-                            </div>
+
+                            {% endfor %}
+
+
+
                           </div>
                       </div>                        
                     </div>                  
