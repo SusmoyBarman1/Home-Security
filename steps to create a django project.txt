@@ -20,4 +20,12 @@ add this command in the top of every html file: {% load static %}
 then write a command in cmd: python manage.py collectstatic 
 
 This will autometically create a folder callded 'assets' and copy all static files into it. But till this point, the html file can not load the static files. To load the static files in html file, we need to put all 'href' and 'src' into:
-{% static 'href' %}
+{% static 'href' %}.
+
+7. Connector between django and postgresql is: psycopg2 (pip install ..)
+
+8. add the colums, we have to migrate: python manage.py makemigrations
+
+Then create a table: python manage.py sqlmigrate mysite 0001
+
+And then, add your table with database: python manage.py migrate
