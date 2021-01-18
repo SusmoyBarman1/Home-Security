@@ -29,3 +29,21 @@ This will autometically create a folder callded 'assets' and copy all static fil
 Then create a table: python manage.py sqlmigrate mysite 0001
 
 And then, add your table with database: python manage.py migrate
+
+9. Create super user: python manage.py createsuperuser
+
+10. To work with data in database, we have to set the media section. in settings.py file, we have to add:
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+and in project/urls.py (not app/urls.py) we have to added:
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = urlpatterns + static(settings.MEDIA_URL,      document_root=settings.MEDIA_ROOT)
+
+and to fetch data from database, we need to write in app.vies.py:
+
+variable = Dbname.objects.all()
