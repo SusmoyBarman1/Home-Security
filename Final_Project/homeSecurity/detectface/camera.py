@@ -37,3 +37,5 @@ class IPCamera(object):
 		# drawing rectangle in faces
 		for (x, y, w, h) in faces:
 			cv2.rectangle(image, pt1=(x, y), pt2=(x+w, y+h), color=(0, 255))
+
+## Commeting for no reason
